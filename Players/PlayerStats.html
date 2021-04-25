@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="./PlayerStyles.css">
+	<title>Player Statistics</title>
+	<script src="../js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+<h1>Player Stats</h1>
+
+<div>
+	<?php
+		include('PlayerSelect.php');
+	?>
+</div>
+
+<table class="stats-table">
+	<tr class="stats-table-row-headings">
+		<th>Name</th>
+		<th>Number</th>
+		<th>Team</th>
+		<th>Salary</th>
+		<th>Position</th>
+	</tr>
+</table>
+
+<form action="../Games/GameStats.html">
+	<input type="submit" value="View Games" />
+</form>
+
+<form action="../Teams/TeamStats.html">
+	<input type="submit" value="View Teams">
+</form>
+
+</body>
+</html>
