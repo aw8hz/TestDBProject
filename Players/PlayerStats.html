@@ -19,10 +19,38 @@
 	<tr class="stats-table-row-headings">
 		<th>Name</th>
 		<th>Number</th>
-		<th>Team</th>
-		<th>Salary</th>
 		<th>Position</th>
+		<th>Team</th>
+		<th>Goals</th>
+		<th>Assists</th>
+		<th>+/-</th>
+		<th>Salary</th>
+		<th>Handedness</th>
+		<th>Home Town</th>
+		<th>Games Played</th>
+		<th>Line Name</th>
 	</tr>
+	<?php
+		require_once('./library.php');
+		$db_con = new mysqli($SERVER, $USERNAME, $PASSWORD, $DATABASE);
+		
+		if(mysqli_connect_errno()) {
+			echo("Can't connect to MySQL Server. Error code: " . mysqli_connect_error());
+			return null;
+		}
+		
+		$result = mysqli_query($db_connection, "SELECT * FROM skater");
+
+		while($row = mysqli_fetch_array($result)) {
+			echo "<tr>";
+			for($row as $value) {
+				echo "<td>" . $value . "</td>";
+			}
+			echo "</tr>";
+		}
+
+		mysqli_close($db_con);
+	?>
 </table>
 
 <form action="../Games/GameStats.html">

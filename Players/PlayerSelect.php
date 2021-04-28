@@ -9,12 +9,15 @@
 
 	$result = mysqli_query($db_connection, "SELECT * FROM skater");
 
+	echo"<table><tr><th>Name</th><th>Number</th><th>Salary</th><th>Team</th></tr>";
+
 	while($row = mysqli_fetch_array($result)) {
-		echo $row['name'];
-		echo $row['number'];
-		echo $row['salary'];
-		echo $row['team'];
-		echo "<br>";
+		echo "<tr>";
+		echo "<td>" . $row['name'] . "</td>";
+		echo "<td>" . $row['number'] . "</td>";
+		echo "<td>" . $row['salary'] . "</td>";
+		echo "<td>" . $row['team'] . "</td>";
+		echo "</tr>";
 	}
 
 	mysqli_close($db_connection);
