@@ -1,18 +1,68 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
 	<link rel="stylesheet" href="./GameStyles.css">
 	<title>Game Statistics</title>
+	<script src="../js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
 </head>
 <body>
-<h2>Games</h2>
 
-<form action="../Teams/TeamStats.html">
-	<input type="submit" value="View Teams" />
-</form>
+<h1>Game Stats</h1>
+
+<div>
+	<?php
+		include('GameSelect.php');
+	?>
+</div>
+
+<table class="stats-table">
+	<tr class="stats-table-row-headings">
+		<th>Number</th>
+		<th>OT</th>
+		<th>Shootout</th>
+		<th>Home Team</th>
+		<th>away team</th>
+		<th>Home Goals</th>
+		<th>home PIM</th>
+		<th>home corsi</th>
+		<th>home shots on net</th>
+		<th>home missed shots</th>
+		<th>away goals</th>
+		<th>away PIM</th>
+		<th>away corsi</th>
+		<th>away shots on net</th>
+		<th>away missed shots</th>
+	</tr>
+	<?php
+		require_once('./library.php');
+		$db_con = new mysqli($SERVER, $USERNAME, $PASSWORD, $DATABASE);
+		
+		if(mysqli_connect_errno()) {
+			echo("Can't connect to MySQL Server. Error code: " . mysqli_connect_error());
+			return null;
+		}
+		
+		$result = mysqli_query($db_connection, "SELECT * FROM game");
+
+		while($row = mysqli_fetch_array($result)) {
+			echo "<tr>";
+			for($row as $value) {
+				echo "<td>" . $value . "</td>";
+			}
+			echo "</tr>";
+		}
+
+		mysqli_close($db_con);
+	?>
+</table>
 
 <form action="../Players/PlayerStats.html">
 	<input type="submit" value="View Players" />
 </form>
+
+<form action="../Teams/TeamStats.html">
+	<input type="submit" value="View Teams">
+</form>
+
 </body>
 </html>
