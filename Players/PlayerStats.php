@@ -37,18 +37,18 @@
 
 		while($row = mysqli_fetch_array($result)) {
 			echo '<tr class="stats-table-row">';
-			echo '<td class="stats-table-item">' . $row['name'] . '</td>';
-			echo '<td class="stats-table-item">' . $row['number'] . '</td>';
-			echo '<td class="stats-table-item">' . $row['position'] . '</td>';
-			echo '<td class="stats-table-item">' . $row['team'] . '</td>';
-			echo '<td class="stats-table-item">' . $row['goals'] . '</td>';
-			echo '<td class="stats-table-item">' . $row['assists'] . '</td>';
-			echo '<td class="stats-table-item">' . $row['plus_minus'] . '</td>';
-			echo '<td class="stats-table-item">' . $row['salary'] . '</td>';
-			echo '<td class="stats-table-item">' . $row['handedness'] . '</td>';
-			echo '<td class="stats-table-item">' . $row['home_town'] . '</td>';
-			echo '<td class="stats-table-item">' . $row['games_played'] . '</td>';
-			echo '<td class="stats-table-item">' . $row['line_name'] . '</td>';
+			echo '<td class="stats-table-item">' . $row['name'] ?: '' . '</td>';
+			echo '<td class="stats-table-item">' . $row['number'] ?: '' . '</td>';
+			echo '<td class="stats-table-item">' . $row['position'] ?: '' . '</td>';
+			echo '<td class="stats-table-item">' . $row['team'] ?: '' . '</td>';
+			echo '<td class="stats-table-item">' . $row['goals'] ?: '' . '</td>';
+			echo '<td class="stats-table-item">' . $row['assists'] ?: '' . '</td>';
+			echo '<td class="stats-table-item">' . $row['plus_minus'] ?: '' . '</td>';
+			echo '<td class="stats-table-item">' . $row['salary'] ?: '' . '</td>';
+			echo '<td class="stats-table-item">' . $row['handedness'] ?: '' . '</td>';
+			echo '<td class="stats-table-item">' . $row['home_town'] ?: '' . '</td>';
+			echo '<td class="stats-table-item">' . $row['games_played'] ?: '' . '</td>';
+			echo '<td class="stats-table-item">' . $row['line_name'] ?: '' . '</td>';
 			echo '</tr>';
 		}
 
@@ -64,7 +64,7 @@
 	<input type="submit" value="View Games" />
 </form>
 
-<form action="../Teams/TeamStats.html">
+<form action="../Teams/TeamStats.php">
 	<input type="submit" value="View Teams">
 </form>
 

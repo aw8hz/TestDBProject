@@ -40,21 +40,21 @@
 
         while($row = mysqli_fetch_array($result)) {
             echo "<tr>";
-            echo "<td>" . $row['number'] . "</td>";
+            echo "<td>" . $row['number'] ?: '' . "</td>";
             echo "<td>" . $row['OT'] . "</td>";
-            echo "<td>" . $row['shootout'] . "</td>";
-            echo "<td>" . $row['home_team'] . "</td>";
-            echo "<td>" . $row['away_team'] . "</td>";
-            echo "<td>" . $row['home_goals'] . "</td>";
-            echo "<td>" . $row['home_PIM'] . "</td>";
-            echo "<td>" . $row['home_corsi'] . "</td>";
-            echo "<td>" . $row['home_shots_on_net'] . "</td>";
-            echo "<td>" . $row['home_missed_shots'] . "</td>";
-            echo "<td>" . $row['away_goals'] . "</td>";
-            echo "<td>" . $row['away_PIM'] . "</td>";
-            echo "<td>" . $row['away_corsi'] . "</td>";
-            echo "<td>" . $row['away_shots_on_net'] . "</td>";
-            echo "<td>" . $row['away_missed_shots'] . "</td>";
+            echo "<td>" . $row['shootout'] ?: '' . "</td>";
+            echo "<td>" . $row['home_team'] ?: '' . "</td>";
+            echo "<td>" . $row['away_team'] ?: '' . "</td>";
+            echo "<td>" . $row['home_goals'] ?: '' . "</td>";
+            echo "<td>" . $row['home_PIM'] ?: '' . "</td>";
+            echo "<td>" . $row['home_corsi'] ?: '' . "</td>";
+            echo "<td>" . $row['home_shots_on_net'] ?: '' . "</td>";
+            echo "<td>" . $row['home_missed_shots'] ?: '' . "</td>";
+            echo "<td>" . $row['away_goals'] ?: '' . "</td>";
+            echo "<td>" . $row['away_PIM'] ?: '' . "</td>";
+            echo "<td>" . $row['away_corsi'] ?: '' . "</td>";
+            echo "<td>" . $row['away_shots_on_net'] ?: '' . "</td>";
+            echo "<td>" . $row['away_missed_shots'] ?: '' . "</td>";
             echo "</tr>";
         }
 
@@ -66,11 +66,11 @@
 	<input type="submit" value="Add Another Game" />
 </form>
 
-<form action="../Player/PlayerStats.php">
+<form action="../Players/PlayerStats.php">
 	<input type="submit" value="View Players" />
 </form>
 
-<form action="../Teams/TeamStats.html">
+<form action="../Teams/TeamStats.php">
 	<input type="submit" value="View Teams">
 </form>
 
