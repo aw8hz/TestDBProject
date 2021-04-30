@@ -36,9 +36,7 @@
 			return null;
 		}
 
-		$result = mysqli_query($db_connection, "SELECT * FROM game");
-
-	    echo"<table><tr><th>Number</th><th>OT</th><th>Shootout</th><th>Home Team</th><th>away team</th><th>Home Goals</th><th>home PIM</th><th>home corsi</th><th>home shots on net</th><th>home missed shots</th><th>away goals</th><th>away PIM</th><th>away corsi</th><th>away shots on net</th><th>away missed shots</th></tr>";
+		$result = mysqli_query($db_con, "SELECT * FROM game");
 
         while($row = mysqli_fetch_array($result)) {
             echo "<tr>";
@@ -68,7 +66,7 @@
 	<input type="submit" value="Add Another Game" />
 </form>
 
-<form action="../Player/PlayerStats.html">
+<form action="../Player/PlayerStats.php">
 	<input type="submit" value="View Players" />
 </form>
 

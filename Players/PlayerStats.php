@@ -60,7 +60,7 @@
 	<input type="submit" value="Add Another Skater" />
 </form>
 
-<form action="../Games/GameStats.html">
+<form action="../Games/GameStats.php">
 	<input type="submit" value="View Games" />
 </form>
 
