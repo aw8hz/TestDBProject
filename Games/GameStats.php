@@ -61,6 +61,12 @@
                         <input type='submit' value='Update' />
                     </form>
                     </td>";
+            echo "<td class='stats-table-item'>
+                    <form action='./GameDelete.php' method='post'>
+                        <input type='hidden' name='number' value='" . $row['number'] . "' />
+                        <input type='submit' value='Delete' />
+                    </form>
+                    </td>";
             echo "</tr>";
         }
 
