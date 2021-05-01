@@ -55,6 +55,12 @@
             echo "<td>" . $row['away_corsi'] ?: '' . "</td>";
             echo "<td>" . $row['away_shots_on_net'] ?: '' . "</td>";
             echo "<td>" . $row['away_missed_shots'] ?: '' . "</td>";
+            echo "<td class='stats-table-item'>
+                    <form action='./GameUpdateForm.php' method='post'>
+                        <input type='hidden' name='number' value='" . $row['number'] . "' />
+                        <input type='submit' value='Update' />
+                    </form>
+                    </td>";
             echo "</tr>";
         }
 

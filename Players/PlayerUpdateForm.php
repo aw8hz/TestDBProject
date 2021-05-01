@@ -30,6 +30,9 @@ Home Town: <input type="text" name="home_town"><BR>
 Games Played: <input type="text" name="games_played"><BR>
 Line Name: <input type="text" name="line_name"><BR>
 <input type="Submit">
-
+</form>
+<form action="./PlayerStats.php" method="post">
+	<input type="submit" value="Cancel" />
+</form>
 </body>
 </html>
