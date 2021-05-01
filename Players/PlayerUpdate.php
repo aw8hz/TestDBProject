@@ -21,7 +21,7 @@ $sql_update .= (((strlen($sql_update) > 19) and $_POST['handedness']) ? ", " : "
 $sql_update .= (((strlen($sql_update) > 19) and $_POST['home_town']) ? ", " : "") . ($_POST['home_town'] ? "home_town = '" . $_POST['home_town']."'" : "");
 $sql_update .= (((strlen($sql_update) > 19) and $_POST['games_played']) ? ", " : "") . ($_POST['games_played'] ? "games_played = '" . $_POST['games_played']."'" : "");
 $sql_update .= (((strlen($sql_update) > 19) and $_POST['line_name']) ? ", " : "") . ($_POST['line_name'] ? "line_name = '" . $_POST['line_name']."'" : "");
-$sql_update .= " WHERE name = '" . $_POST['name']."'";
+$sql_update .= " WHERE name = '" . $_POST['name']."';";
 
 //echo $sql_update;
 
