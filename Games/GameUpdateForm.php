@@ -1,9 +1,5 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-	<title>Update a Game:</title>
-</head>
-<body>
+<?php include('../BaseLayout/baseBegin.html'); ?>
+
 <h2>Update Game <?php echo $_POST['number']; ?>:</h2>
 <form action="GameUpdate.php" method="post">
 <input type="hidden" name="number" value="<?php echo $_POST['number']; ?>"><BR>
@@ -34,5 +30,5 @@ Away Missed Shots: <input type="text" name="away_missed_shots"><BR>
 <form action="GameStats.php" method="post">
     <input type="submit" value="Cancel" />
 </form>
-</body>
-</html>
+
+<?php include('../BaseLayout/baseEnd.html'); ?>

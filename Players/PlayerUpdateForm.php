@@ -1,9 +1,5 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-	<title>Update a Player</title>
-</head>
-<body>
+<?php include('../BaseLayout/baseBegin.html'); ?>
+
 <h2>Update skater information for <?php echo $_POST['name']; ?>:</h2>
 <form action="PlayerUpdate.php" method="post">
 <input type="hidden" name="name" value="<?php echo $_POST['name']; ?>"><BR>
@@ -34,5 +30,5 @@ Line Name: <input type="text" name="line_name"><BR>
 <form action="./PlayerStats.php" method="post">
 	<input type="submit" value="Cancel" />
 </form>
-</body>
-</html>
+
+<?php include('../BaseLayout/baseEnd.html'); ?>
