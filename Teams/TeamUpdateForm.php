@@ -1,9 +1,5 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-	<title>Update a Team</title>
-</head>
-<body>
+<?php include('../BaseLayout/baseBegin.html'); ?>
+
 <h2>Update information for the <?php echo $_POST['home_city'] . " " . $_POST['name']; ?>:</h2>
 <form action="TeamUpdate.php" method="post">
 <input type="hidden" name="name" value="<?php echo $_POST['name']; ?>"><BR>
@@ -31,5 +27,5 @@ Stadium: <input type="text" name="stadium"><BR>
 <form action="TeamStats.php" method="post">
 	<input type="Submit" value="Cancel" />
 </form>
-</body>
-</html>
+
+<?php include('../BaseLayout/baseEnd.html'); ?>

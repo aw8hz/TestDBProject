@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" href="./PlayerStyles.css">
-	<title>Player Statistics</title>
-	<script src="../js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
-</head>
-<body>
+<?php include('../BaseLayout/baseBegin.html'); ?>
 
 <h1>Player Stats</h1>
 
@@ -80,5 +73,4 @@
 	<input type="submit" value="View Teams">
 </form>
 
-</body>
-<html>
+<?php include('../BaseLayout/baseEnd.html'); ?>
