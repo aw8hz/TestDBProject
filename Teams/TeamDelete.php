@@ -9,15 +9,18 @@ if (mysqli_connect_errno()){
 	echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$sql_delete = "DELETE FROM team WHERE name = '" . $_POST['name'] . "';";
+$sql_delete = $db_con->prepare("DELETE FROM team WHERE name = ?");
+$sql_delete->bind_param("s", $name);
+
+$name = $_POST['name'];
 
 //echo $sql_delete;
 
-if (!mysqli_query($db_con,$sql_delete)){
-	die('Error: ' . mysqli_error($db_con));
-}
+$sql_delete->execute();
 
 echo "1 record deleted";
+
+$sql_delete->close();
 
 mysqli_close($db_con);
 ?>
