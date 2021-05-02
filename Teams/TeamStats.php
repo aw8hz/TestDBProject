@@ -1,4 +1,4 @@
-<!--#include virtual="../BaseLayout/baseBegin.html"-->
+<?php include '../BaseLayout/baseBegin.html';?>
 
 <h1>Team Stats</h1>
 
@@ -71,4 +71,4 @@
 	<input type="submit" value="View Games" />
 </form>
 
-<!--#include virtual="../BaseLayout/baseEnd.html"-->
+<?php include '../BaseLayout/baseEnd.html';?>
