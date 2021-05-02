@@ -1,6 +1,6 @@
 <?php
 
-//header("Location: ./GameStats.php");
+header("Location: ./GameStats.php");
 
 include_once("./library.php");
 $db_con = new mysqli($SERVER, $USERNAME, $PASSWORD, $DATABASE);
