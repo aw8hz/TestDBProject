@@ -49,6 +49,18 @@
 			echo '<td class="stats-table-item">' . $row['home_town'] ?: '' . '</td>';
 			echo '<td class="stats-table-item">' . $row['games_played'] ?: '' . '</td>';
 			echo '<td class="stats-table-item">' . $row['line_name'] ?: '' . '</td>';
+			echo "<td class='stats-table-item'>
+				<form action='./PlayerUpdateForm.php' method='post'>
+					<input type='hidden' name='name' value='" . $row['name'] . "' />
+					<input type='submit' value='Update' />
+				</form>
+				</td>";
+			echo "<td class='stats-table-item'>
+				<form action='./PlayerDelete.php' method='post'>
+					<input type='hidden' name='name' value='" . $row['name'] . "' />
+					<input type='submit' value='Delete' />
+				</form>
+				</td>";
 			echo '</tr>';
 		}
 
@@ -69,4 +81,4 @@
 </form>
 
 </body>
-</html>
+<html>

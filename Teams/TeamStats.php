@@ -47,6 +47,18 @@
 			echo '<td class="stats-table-item">' . $row['coach'] ?: ''. '</td>';
 			echo '<td class="stats-table-item">' . $row['general_manager'] ?: ''. '</td>';
 			echo '<td class="stats-table-item">' . $row['stadium'] ?: ''. '</td>';
+			echo "<td class='stats-table-item'>
+				<form action='./TeamUpdateForm.php' method='post'>
+					<input type='hidden' name='name' value='" . $row['name'] ."' />
+					<input type='submit' value='Update' />
+				</form>
+				</td>";
+			echo "<td class='stats-table-item'>
+				<form action='./TeamDelete.php' method='post'>
+					<input type='hidden' name='name' value='" . $row['name'] ."' />
+					<input type='submit' value='Delete' />
+				</form>
+				</td>";
 			echo '</tr>';
 		}
 
