@@ -1,8 +1,8 @@
 <?php include('../BaseLayout/baseBegin.html'); ?>
-<div class="container m-1">
+<div class="container m-1" style="overflow-x: auto">
 	<h1>Game Stats</h1>
 
-	<table class="table">
+	<table class="table" >
 		<tr class="stats-table-row-heading">
 			<th class="stats-table-heading">Number</th>
 			<th class="stats-table-heading">OT</th>

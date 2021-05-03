@@ -45,13 +45,13 @@
 				echo "<td class='stats-table-item'>
 					<form action='./PlayerUpdateForm.php' method='post'>
 						<input type='hidden' name='name' value='" . $row['name'] . "' />
-						<input class='btn btn-secondary' type='submit' value='Update' />
+						<input type='submit' value='Update' />
 					</form>
 					</td>";
 				echo "<td class='stats-table-item'>
 					<form action='./PlayerDelete.php' method='post'>
 						<input type='hidden' name='name' value='" . $row['name'] . "' />
-						<input class='btn btn-secondary' type='submit' value='Delete' />
+						<input type='submit' value='Delete' />
 					</form>
 					</td>";
 				echo '</tr>';
