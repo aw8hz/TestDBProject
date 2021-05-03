@@ -11,10 +11,10 @@ if (mysqli_connect_errno()){
 
 //print_r($_POST);
 
-$sql_insert = $db_con->prepare("INSERT INTO game (number, OT, shootout, home_team, away_team, home_goals, home_PIM, home_corsi, home_shots_on_net, home_missed_shots, away_goals, away_PIM, away_corsi, away_shots_on_net, away_missed_shots) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-$sql_insert->bind_param("iiissiiiiiiiiii", $number, $OT, $shootout, $home_team, $away_team, $home_goals, $home_PIM, $home_corsi, $home_shots_on_net, $home_missed_shots, $away_goals, $away_PIM, $away_corsi, $away_shots_on_net, $away_missed_shots);
+// TODO: In the Game table, add the auto-increment clause to the Number column
+$sql_insert = $db_con->prepare("INSERT INTO game (OT, shootout, home_team, away_team, home_goals, home_PIM, home_corsi, home_shots_on_net, home_missed_shots, away_goals, away_PIM, away_corsi, away_shots_on_net, away_missed_shots) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+$sql_insert->bind_param("iissiiiiiiiiii", $OT, $shootout, $home_team, $away_team, $home_goals, $home_PIM, $home_corsi, $home_shots_on_net, $home_missed_shots, $away_goals, $away_PIM, $away_corsi, $away_shots_on_net, $away_missed_shots);
 
-$number = $_POST['number'];
 $OT = $_POST['OT'];
 $shootout = $_POST['shootout'];
 $home_team = $_POST['home_team'];
