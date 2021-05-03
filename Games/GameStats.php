@@ -2,7 +2,7 @@
 <div class="container m-1" style="overflow-x: auto">
 	<h1>Game Stats</h1>
 
-	<table class="table" >
+	<table class="table table-striped table-bordered" >
 		<tr class="stats-table-row-heading">
 			<th class="stats-table-heading">Number</th>
 			<th class="stats-table-heading">OT</th>

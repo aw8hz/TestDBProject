@@ -2,7 +2,7 @@
 <div class="container m-1" style="overflow-x:auto">
 	<h1>Team Stats</h1>
 
-	<table class="table">
+	<table class="table table-striped table-bordered">
 		<tr class="stats-table-row-heading">
 			<th class="stats-table-heading">Name</th>
 			<th class="stats-table-heading">Home City</th>
