@@ -22,13 +22,15 @@
 <div class="mb-3">
 	<label for="conferenceSelect" class="form-label">Conference:</label>
 	<select name="conference" class="form-select" id="conferenceSelect">
-		<option value="Eastern">Eastern</option>
-		<option value="Western">Western</option>
+		<option value="">---</option>
+		<option value="East">Eastern</option>
+		<option value="West">Western</option>
 	</select>
 </div>
 <div class="mb-3">
 	<label for="divisionSelect" class="form-label">Division:</label>
 	<select name="division" class="form-select" id="divisionSelect">
+		<option value="">---</option>
 		<option value="Atlantic">Atlantic</option>
 		<option value="Central">Central</option>
 		<option value="Metropolitan">Metropolitan</option>

@@ -2,7 +2,8 @@
 <div class="container m-1" style="overflow-x: auto">
 	<h1>Game Stats</h1>
 
-	<table class="table table-striped table-bordered" >
+	<table class="table table-striped table-bordered" id="StatsTable">
+		<thead>
 		<tr class="stats-table-row-heading">
 			<th class="stats-table-heading">Number</th>
 			<th class="stats-table-heading">OT</th>
@@ -19,7 +20,11 @@
 			<th class="stats-table-heading">Away Corsi</th>
 			<th class="stats-table-heading">Away Shots On Net</th>
 			<th class="stats-table-heading">Away Missed Shots</th>
+			<th class="stats-table-heading">Update</th>
+			<th class="stats-table-heading">Delete</th>
 		</tr>
+		</thead>
+		<tbody>
 		<?php
 			require_once('./library.php');
 			$db_con = new mysqli($SERVER, $USERNAME, $PASSWORD, $DATABASE);
@@ -65,6 +70,7 @@
 
 			mysqli_close($db_con);
 		?>
+		</tbody>
 	</table>
 </div>
 <div class="mb-3 d-flex flex-row">
