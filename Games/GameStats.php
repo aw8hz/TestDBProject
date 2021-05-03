@@ -66,19 +66,18 @@
 			mysqli_close($db_con);
 		?>
 	</table>
-	
-	<div class="mb-3 d-flex flex-row">
-		<form action="./GameForm.html" class="mr-1">
-			<input type="submit" class="btn btn-primary" value="Add Another Game" />
-		</form>
+</div>
+<div class="mb-3 d-flex flex-row">
+	<form action="./GameForm.html" class="mr-1">
+		<input type="submit" class="btn btn-primary" value="Add Another Game" />
+	</form>
 
-		<form action="../Players/PlayerStats.php" class="mr-1">
-			<input type="submit" class="btn btn-secondary" value="View Players" />
-		</form>
+	<form action="../Players/PlayerStats.php" class="mr-1">
+		<input type="submit" class="btn btn-secondary" value="View Players" />
+	</form>
 
-		<form action="../Teams/TeamStats.php">
-			<input type="submit" class="btn btn-secondary" value="View Teams">
-		</form>
-	</div>
+	<form action="../Teams/TeamStats.php">
+		<input type="submit" class="btn btn-secondary" value="View Teams">
+	</form>
 </div>
 <?php include('../BaseLayout/baseEnd.html'); ?>

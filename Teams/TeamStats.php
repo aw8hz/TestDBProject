@@ -1,5 +1,5 @@
 <?php include '../BaseLayout/baseBegin.html';?>
-<div class="container m-1">
+<div class="container m-1" style="overflow-x:auto">
 	<h1>Team Stats</h1>
 
 	<table class="table">
@@ -58,19 +58,18 @@
 			mysqli_close($db_con);
 		?>
 	</table>
+</div>
+<div class="mb-3 d-flex flex-row">
+	<form action="./TeamForm.html" class="mr-1">
+		<input type="submit" class="btn btn-primary" value="Add Another Team" />
+	</form>
 
-	<div class="mb-3 d-flex flex-row">
-		<form action="./TeamForm.html" class="mr-1">
-			<input type="submit" class="btn btn-primary" value="Add Another Team" />
-		</form>
+	<form action="../Players/PlayerStats.php" class="mr-1">
+		<input type="submit" class="btn btn-secondary" value="View Players">
+	</form>
 
-		<form action="../Players/PlayerStats.php" class="mr-1">
-			<input type="submit" class="btn btn-secondary" value="View Players">
-		</form>
-
-		<form action="../Games/GameStats.php">
-			<input type="submit" class="btn btn-secondary" value="View Games" />
-		</form>
-	</div>
+	<form action="../Games/GameStats.php">
+		<input type="submit" class="btn btn-secondary" value="View Games" />
+	</form>
 </div>
 <?php include '../BaseLayout/baseEnd.html';?>

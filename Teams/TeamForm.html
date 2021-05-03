@@ -1,25 +1,60 @@
 <!--#include virtual="../BaseLayout/baseBegin.html"-->
 
-<h2>Add a new team:</h2>
+<div class="container">
+<h2>Add a new team</h2>
+<div class="d-flex flex-column p-2">
 <form action="TeamInsert.php" method="post">
-Name: <input type="text" name="name"><BR>
-Home City: <input type="text" name="home_city"><BR>
-Wins: <input type="text" name="wins"><BR>
-Losses: <input type="text" name="losses"><BR>
-Overtime Losses: <input type="text" name="overtime_losses"><BR>
-Conference:	<select name="conference">
+<div class="mb-3">
+	<label for="nameInput" class="form-label">Name:</label>
+	<input type="text" name="name" class="form-control" id="nameInput">
+</div>
+<div class="mb-3">
+	<label for="homeCityInput" class="form-label">Home City:</label>
+	<input type="text" name="home_city" class="form-control" id="homeCityInput">
+</div>
+<div class="mb-3">
+	<label for="winsInput" class="form-label">Wins:</label>
+	<input type="text" name="wins" class="form-control" id="winsInput">
+</div>
+<div class="mb-3">
+	<label for="lossesInput" class="form-label">Losses:</label>
+	<input type="text" name="losses" class="form-control" id="lossesInput">
+</div>
+<div class="mb-3">
+	<label for="OTLossesInput" class="form-label">Overtime Losses:</label>
+	<input type="text" name="overtime_losses" class="form-control" id="OTLossesInput">
+</div>
+<div class="mb-3">
+	<label for="conferenceSelect" class="form-label">Conference:</label>
+	<select name="conference" class="form-select" id="conferenceSelect">
 		<option value="Eastern">Eastern</option>
 		<option value="Western">Western</option>
-	</select><BR>
-Division:	<select name="division">
+	</select>
+</div>
+<div class="mb-3">
+	<label for="divisionSelect" class="form-label">Division:</label>
+	<select name="division" class="form-select" id="divisionSelect">
 		<option value="Atlantic">Atlantic</option>
 		<option value="Central">Central</option>
 		<option value="Metropolitan">Metropolitan</option>
 		<option value="Pacific">Pacific</option>
-	</select><BR>
-Coach: <input type="text" name="coach"><BR>
-General Manager: <input type="text" name="general_manager"><BR>
-Stadium: <input type="text" name="stadium"><BR>
-<input type="Submit">
+	</select>
+</div>
+<div class="mb-3">
+	<label for="coachInput" class="form-label">Coach:</label>
+	<input type="text" name="coach" class="form-control" id="coachInput">
+</div>
+<div class="mb-3">
+	<label for="GMInput" class="form-label">General Manager:</label>
+	<input type="text" name="general_manager" class="form-control" id="GMInput">
+</div>
+<div class="mb-3">
+	<label for="stadiumInput" class="form-label">Stadium:</label>
+	<input type="text" name="stadium" class="form-control" id="stadiumInput">
+</div>
+<input type="Submit" class="btn btn-primary">
+</form>
+</div>
+</div>
 
 <!--#include virtual="../BaseLayout/baseEnd.html"-->
