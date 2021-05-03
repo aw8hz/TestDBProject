@@ -2,6 +2,17 @@
 
 <h1>Game Stats</h1>
 
+<!-- Game Search Bar -->
+<form>
+<div class="form-group">
+    <label for="inputSearchGame">Search games by team names</label>
+    <input type="search" class="form-control" id="inputSearchGame" placeholder="Enter team name">
+</div>
+</form>
+
+<!-- This div is where the .php echo output is displayed onto -->
+<div id="searchGameResult">Search Results</div>
+
 <table class="stats-table">
 	<tr class="stats-table-row-heading">
 		<th class="stats-table-heading">Number</th>
